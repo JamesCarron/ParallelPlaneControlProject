@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="X: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listelement_minmax_edit_TextView"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/listelement_minmax_EditTextMin"
+            android:hint="min"
+            android:width="130dp"
+            android:maxLength="10"
+            android:inputType="number|numberSigned|numberDecimal"
+            android:layout_below="@+id/liselement_minmax_EditTextMax"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberSigned|numberDecimal"
+            android:ems="10"
+            android:id="@+id/liselement_minmax_EditTextMax"
+            android:hint="max"
+            android:maxLength="10"
+            android:layout_below="@+id/listelement_minmax_edit_TextView"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

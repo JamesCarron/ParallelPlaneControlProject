@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/debug_Text1"
+        android:textSize="18sp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/debug_Text2"
+        android:layout_below="@+id/debug_Text1"
+        android:layout_alignStart="@+id/debug_Text1"
+        android:layout_marginTop="-10dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/debug_Text2"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/debug_Text2"
+            android:layout_alignStart="@+id/debug_Text2"
+            android:layout_marginTop="21dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/debug_ET1"
+                android:layout_weight="1"
+                android:hint="command"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/debug_ET2"
+                android:layout_weight="1"
+                android:hint="value"
+                android:inputType="number|numberSigned|numberDecimal" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="Put Command"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/debug_send_button"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center" />
+        <ScrollView
+            android:id="@+id/debug_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/debugLog"
+                android:layout_weight="1"
+                android:layout_margin="10dp" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
